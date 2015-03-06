@@ -5,8 +5,10 @@ printf "Updating system repositories.\n"
 sudo apt-get update
 
 printf "Upgrading system.\n"
-sudo apt-get install -y git-core python-dev python-setuptools
 sudo apt-get upgrade
+
+printf "Installing required dependencies.\n"
+sudo apt-get install -y git-core python-dev python-setuptools
 
 printf "Cloning WiringPi-Python.\n"
 git clone https://github.com/WiringPi/WiringPi-Python.git
